@@ -1,0 +1,15 @@
+# dados baixados (o notebook 01 baixa de novo)
+data/
+# arquivos do Windows / Google Drive
+desktop.ini
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+# pesos intermediários (o modelo final é outputs/<exp>/model.keras)
+outputs/*/best.weights.h5
+# YOLO: checkpoints de cada época (~545 MB) e pesos pré-treinados baixados automaticamente
+outputs/yolo/*/weights/epoch*.pt
+/weights/
+/yolo*.pt
+runs/

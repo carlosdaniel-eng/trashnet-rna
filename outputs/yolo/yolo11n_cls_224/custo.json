@@ -1,0 +1,8 @@
+{
+  "tempo_total_s": 483.23,
+  "epocas": 36,
+  "tempo_medio_epoca_s": 13.42,
+  "pico_gpu_mb": 421.9,
+  "pico_ram_mb": 3447.9,
+  "metodo": "perf_counter em torno de model.train (inclui valida\u00e7\u00e3o por \u00e9poca e salvamento de checkpoints); RAM = ru_maxrss do processo; GPU = torch.cuda.max_memory_allocated"
+}

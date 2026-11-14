@@ -1,0 +1,7 @@
+exp_id,rotulo,parametros,epocas_executadas,melhor_epoca,tempo_total_s,tempo_medio_epoca_s,pico_ram_mb,pico_gpu_mb,val_accuracy,val_f1_macro
+E1_mlp_128x96,MLP 128×96 sem pesos,9471110,34,24,25.3,0.73,1783,329,0.3439,0.24
+E2_mlp_128x96_pesos,MLP 128×96 com pesos,9471110,39,29,24.8,0.63,1849,411,0.2884,0.1602
+E3_cnn_128x96,CNN 128×96 sem pesos,405254,57,47,75.8,1.32,2180,1012,0.7249,0.7122
+E4_cnn_128x96_pesos,CNN 128×96 com pesos,405254,61,51,71.6,1.17,2237,617,0.7275,0.7097
+E5_cnn_256x192,CNN 256×192 sem pesos,405254,62,52,237.5,3.82,3119,2842,0.7302,0.6861
+E6_cnn_512x384,CNN 512×384 sem pesos,405254,93,83,1299.1,13.94,5127,7969,0.7698,0.7271

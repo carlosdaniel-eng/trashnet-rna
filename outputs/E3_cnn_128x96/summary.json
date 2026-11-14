@@ -1,0 +1,46 @@
+{
+  "exp_id": "E3_cnn_128x96",
+  "rotulo": "CNN 128×96 sem pesos",
+  "modelo": "cnn",
+  "resolucao_lxa": "128x96",
+  "pesos_de_classe": null,
+  "seed": 42,
+  "hiperparametros_modelo": {
+    "filters": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "kernel_size": 3,
+    "dense_units": 64,
+    "dropout": 0.3,
+    "learning_rate": 0.001
+  },
+  "hiperparametros_treino": {
+    "optimizer": "adam",
+    "loss": "sparse_categorical_crossentropy",
+    "batch_size": 32,
+    "max_epochs": 100,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 10
+  },
+  "parametros": 405254,
+  "tamanho_modelo_mb": 1.6,
+  "epocas_executadas": 57,
+  "melhor_epoca": 47,
+  "tempo_total_s": 75.8,
+  "tempo_medio_epoca_s": 1.32,
+  "pico_ram_mb": 2180,
+  "pico_gpu_mb": 1012,
+  "metodo_medicao": "time.perf_counter() em volta do model.fit (sem download e sem leitura das imagens); tempo por época inclui a validação; RAM = maior RSS do processo ao fim das épocas (psutil); GPU = pico do TensorFlow.",
+  "val_accuracy": 0.7249,
+  "val_f1_macro": 0.7122,
+  "hardware": {
+    "gpu": "Tesla T4",
+    "cpu": "x86_64",
+    "ram_total_gb": 12.7,
+    "tensorflow": "2.21.0",
+    "keras": "3.13.2"
+  }
+}
