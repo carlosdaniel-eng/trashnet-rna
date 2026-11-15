@@ -40,7 +40,8 @@ trashnet-rna/
 ├── outputs/<exp_id>/  # model.keras, history.csv, summary.json
 ├── outputs/yolo/      # treino do YOLO (best.pt, results.csv, custo.json, curvas)
 ├── results/           # tabelas (.csv) e previsões de validação/teste
-├── figures/           # figuras usadas no artigo
+├── figures/           # figuras geradas pelos notebooks
+├── artigo/            # artigo em PDF
 └── requirements.txt
 ```
 
@@ -61,8 +62,8 @@ O Colab já possui TensorFlow/Keras, scikit-learn, pandas, matplotlib, Pillow e 
 
 ### Avaliação sem novo treinamento
 
-Com os modelos em `outputs/<exp_id>/model.keras` (treinados por vocês ou baixados do link abaixo), basta rodar
-`03_resultados.ipynb`: ele apenas carrega os modelos salvos e calcula as previsões, métricas e figuras.
+Os modelos treinados já estão em `outputs/<exp_id>/model.keras`; basta rodar `03_resultados.ipynb`, que apenas carrega
+os modelos salvos e calcula as previsões, métricas e figuras.
 
 **Modelos treinados:** já estão neste repositório: `outputs/E*_.../model.keras` (os seis experimentos) e
 `outputs/yolo/yolo11n_cls_224/weights/best.pt` (YOLO). Todos têm menos de 100 MB, então não é preciso baixar nada à parte.
@@ -74,9 +75,12 @@ pip install -r requirements.txt
 ```
 
 Abra os notebooks a partir da pasta `notebooks/` (Jupyter ou VS Code); os dados são baixados para `data/`.
-Versões testadas: Python 3.10+, TensorFlow ≥ 2.16 (Keras 3), scikit-learn ≥ 1.3.
 
-## Decisões metodológicas (resumo; detalhar e justificar no artigo)
+**Versões usadas nos treinos** (Google Colab, GPU Tesla T4, 12,7 GB de RAM): TensorFlow 2.21.0, Keras 3.13.2,
+Ultralytics 8.4.178 e PyTorch 2.11 (YOLO). O código também funciona com Python 3.10+, TensorFlow ≥ 2.16 (Keras 3) e
+scikit-learn ≥ 1.3.
+
+## Decisões metodológicas (resumo; as justificativas estão no artigo)
 
 **Dados**
 - Fonte: `dataset-resized.zip` do repositório TrashNet (Hugging Face), 2.527 imagens JPEG RGB de 512 × 384, sem arquivos corrompidos
