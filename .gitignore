@@ -13,3 +13,6 @@ outputs/yolo/*/weights/epoch*.pt
 /weights/
 /yolo*.pt
 runs/
+
+# peso da última época do YOLO (o modelo usado é o best.pt)
+outputs/yolo/*/weights/last.pt

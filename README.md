@@ -2,7 +2,7 @@
 
 Atividade final de **Redes Neurais Artificiais** — EAD Unifor.
 
-> **Equipe:** _Nome Completo (matrícula)_, _Nome Completo (matrícula)_, ... ← preencher
+> **Autor:** Carlos Daniel Albino Alves (matrícula 2523582)
 > **Artigo:** [`artigo/artigo_trashnet.pdf`](artigo/artigo_trashnet.pdf)
 
 Estudo de classificação de imagens de resíduos em seis classes (glass, paper, cardboard, plastic, metal, trash) com o dataset
@@ -121,4 +121,4 @@ Versões testadas: Python 3.10+, TensorFlow ≥ 2.16 (Keras 3), scikit-learn ≥
 ## Uso de IA
 
 O código deste repositório foi desenvolvido com apoio de IA generativa (permitido pela proposta). As decisões metodológicas,
-a análise e a interpretação dos resultados são da equipe.
+a análise e a interpretação dos resultados são do autor.
