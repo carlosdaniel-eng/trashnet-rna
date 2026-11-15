@@ -21,7 +21,7 @@ def save_fig(fig, name: str):
     C.FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     path = C.FIGURES_DIR / f"{name}.png"
     fig.savefig(path, bbox_inches="tight")
-    print(f"Figura salva: {path}")
+    print(f"Figura salva: {C.short_path(path)}")
 
 
 # ---------------------------------------------------------------------------

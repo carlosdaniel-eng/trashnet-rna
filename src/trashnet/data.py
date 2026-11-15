@@ -18,7 +18,7 @@ from . import config as C
 def download_dataset() -> Path:
     """Baixa e extrai o dataset-resized.zip, se ainda não estiver na pasta de dados."""
     if C.DATASET_ROOT.exists():
-        print("Dataset já disponível em", C.DATASET_ROOT)
+        print("Dataset já disponível em", C.short_path(C.DATASET_ROOT))
         return C.DATASET_ROOT
     C.DATA_DIR.mkdir(parents=True, exist_ok=True)
     if not C.DATASET_ZIP.exists():
@@ -26,7 +26,7 @@ def download_dataset() -> Path:
         urllib.request.urlretrieve(C.DATASET_URL, C.DATASET_ZIP)
     with zipfile.ZipFile(C.DATASET_ZIP) as z:
         z.extractall(C.DATA_DIR)
-    print("Dataset extraído em", C.DATASET_ROOT)
+    print("Dataset extraído em", C.short_path(C.DATASET_ROOT))
     return C.DATASET_ROOT
 
 
@@ -83,7 +83,7 @@ def make_split(inv: pd.DataFrame) -> pd.DataFrame:
 def save_split(split_df: pd.DataFrame) -> None:
     C.SPLIT_CSV.parent.mkdir(parents=True, exist_ok=True)
     split_df.to_csv(C.SPLIT_CSV, index=False)
-    print("Divisão salva em", C.SPLIT_CSV)
+    print("Divisão salva em", C.short_path(C.SPLIT_CSV))
 
 
 def load_split() -> pd.DataFrame:

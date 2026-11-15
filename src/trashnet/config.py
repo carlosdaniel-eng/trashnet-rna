@@ -103,6 +103,15 @@ EXPERIMENTS = {
 }
 
 
+def short_path(path) -> str:
+    """Caminho relativo à pasta do projeto, quando possível (mensagens independentes da máquina)."""
+    path = Path(path)
+    try:
+        return path.resolve().relative_to(PROJECT_DIR).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
 def experiment_label(exp_id: str) -> str:
     """Rótulo curto e legível para tabelas e gráficos."""
     cfg = EXPERIMENTS[exp_id]
